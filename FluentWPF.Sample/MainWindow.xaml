@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:FluentWPF.Sample"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+    <StackPanel>
+        <TextBlock Text="{Binding FirstName}" />
+        <TextBlock Text="{Binding LastName}" />
+        <TextBox Text="{Binding FirstName}" />
+        <TextBox Text="{Binding LastName}" />
+        <Button Click="Button_Click">Save</Button>
+    </StackPanel>
 </Window>

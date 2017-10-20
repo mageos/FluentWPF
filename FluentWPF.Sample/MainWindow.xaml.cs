@@ -23,6 +23,18 @@ namespace FluentWPF.Sample
         public MainWindow()
         {
             InitializeComponent();
+
+            Loaded += MainWindow_Loaded;
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            DataContext = new TestViewModel(new TestModel() { FirstName = "Matt", LastName = "Osborne" });
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var dummy = (DataContext as TestViewModel).Model.FirstName;
         }
     }
 }
